@@ -569,7 +569,7 @@ function SidebarMenuAction({
         "peer-data-[size=lg]/menu-button:top-2.5",
         "group-data-[collapsible=icon]:hidden",
         showOnHover &&
-          "peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0",
+        "peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0",
         className
       )}
       {...props}
@@ -698,6 +698,43 @@ function SidebarMenuSubButton({
   )
 }
 
+const MOCK_SIDEBAR_DATA = {
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+  teams: [
+    {
+      name: "Acme Inc",
+      logo: PanelLeftIcon,
+      plan: "Enterprise",
+    },
+  ],
+  navMain: [
+    {
+      title: "Playground",
+      url: "#",
+      icon: PanelLeftIcon,
+      isActive: true,
+      items: [
+        {
+          title: "History",
+          url: "#",
+        },
+        {
+          title: "Starred",
+          url: "#",
+        },
+        {
+          title: "Settings",
+          url: "#",
+        },
+      ],
+    },
+  ],
+}
+
 export {
   Sidebar,
   SidebarContent,
@@ -723,4 +760,5 @@ export {
   SidebarSeparator,
   SidebarTrigger,
   useSidebar,
+  MOCK_SIDEBAR_DATA,
 }
